@@ -1,0 +1,16 @@
+---
+- hosts: test_servers
+  tasks:
+  - name: create directory
+    file:
+      path: /root/tmp
+      state: directory
+      owner: root
+      mode: 0755
+
+  - name: copy file
+    copy:
+      src: /etc/hosts
+      dest: /root/tmp/hosts
+      owner: root
+      mode: 0644

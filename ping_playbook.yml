@@ -1,0 +1,6 @@
+---
+
+- hosts: test_servers
+  tasks:
+  - name: Ping Connection test
+    ping:
